@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using UnityEngine;
 
 namespace WalkingMan
@@ -6,17 +7,18 @@ namespace WalkingMan
     [CreateAssetMenu(fileName = "Data", menuName = "Data/Data")]
     public sealed class Data : ScriptableObject
     {
-        [SerializeField] private string _playerDataPath;
+        [SerializeField] private PlayerData _playerData;
         [SerializeField] private string _levelDataPath;
         [SerializeField] private string _bulletDataPath;
         [SerializeField] private string _enemyDataPath;
         [SerializeField] private string _mainMenuDataPath;
         [SerializeField] private string _backgroundDataPath;
-        [SerializeField] private string _cameraMoveDataPath;
+        [SerializeField] private CameraMoveData _cameraMoveData;
         [SerializeField] private string _soundsDataPath;
 
-        private PlayerData _player;
         /*
+        private PlayerData _player;
+        
         private LevelData _level;
         private BulletData _bullet;
         private EnemyData _enemies;
@@ -29,14 +31,17 @@ namespace WalkingMan
         {
             get
             {
-                if(_player == null)
+                if(_playerData == null)
                 {
-                    _player = Load<PlayerData>(_playerDataPath);
+                    throw new Exception("Player not found");
                 }
-
-                return _player;
+                else
+                {
+                    return _playerData;
+                }
             }
         }
+        public CameraMoveData CameraMoveData => _cameraMoveData;
         /*
         public LevelData Level
         {
@@ -130,7 +135,9 @@ namespace WalkingMan
             
         }
         */
+        /*
         private T Load<T>(string resourcesPath) where T : Object =>
             Resources.Load<T>(Path.ChangeExtension(resourcesPath, null));
+        */
     }
 }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b553b3ca6438c40868527fbf410f42, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: bddcf458b4f7f3f47a78b4c3f7520276, type: 2}
+  _levelDataPath: 
+  _bulletDataPath: 
+  _enemyDataPath: 
+  _mainMenuDataPath: 
+  _backgroundDataPath: 
+  _cameraMoveData: {fileID: 11400000, guid: 55098740569a93043b0f0fbfddb1dfe0, type: 2}
+  _soundsDataPath: 
