@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a86be40d93ca87b43875cd0511af4b3c
+guid: 150eaeb9f81773441b3a0035c53be1bb
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: 7874013296769767599
     second: walking-man_6
+  - first:
+      213: 8572701225848767943
+    second: walking-man_7
+  - first:
+      213: 6673356438025766492
+    second: walking-man_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -266,6 +272,48 @@ TextureImporter:
       bones: []
       spriteID: fa81aa6006d164d60800000000000000
       internalID: 7874013296769767599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking-man_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c58544485a58f670800000000000000
+      internalID: 8572701225848767943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking-man_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56871cc2568c9c50800000000000000
+      internalID: 6673356438025766492
       vertices: []
       indices: 
       edges: []

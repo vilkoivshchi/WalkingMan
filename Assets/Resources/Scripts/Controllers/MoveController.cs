@@ -30,21 +30,14 @@ namespace WalkingMan
         private void HorizontalOnAxisOnChange(float value)
         {
             _horizontal = value;
-            if(value != 0)
-            {
-                _animator.SetBool("isWalk", true);
-            }
-            else
-            {
-                _animator.SetBool("isWalk", false);
-            }
+            
         }
-
+        
         private void VerticalOnAxisOnChange(float value)
         {
             _vertical = value;
         }
-
+        
         public void Initialization()
         {
             _animator = _unit.gameObject.GetComponent<Animator>();
@@ -56,6 +49,31 @@ namespace WalkingMan
 
             _move.Set(_horizontal * speed, _vertical * speed, 0.0f);
             _unit.localPosition += _move;
+            if (_horizontal != 0)
+            {
+                _animator.SetBool("isWalk", true);
+            }
+            else
+            {
+                _animator.SetBool("isWalk", false);
+            }
+
+            if(_horizontal > 0)
+            {
+                _unit.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if(_horizontal < 0)
+            {
+                _unit.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            }
+            if(_vertical < 0)
+            {
+                _animator.SetBool("isSitting", true);
+            }
+            else
+            {
+                _animator.SetBool("isSitting", false);
+            }
         }
 
         public void Cleanup()
